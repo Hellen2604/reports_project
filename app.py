@@ -5,7 +5,7 @@ import reporte_vencimiento  # tu script actual
 app = Flask(__name__)
 
 # Carpeta de salida: Desktop del usuario actual + carpeta Reporte_Cartera
-desktop_path = os.path.join(os.environ['USERPROFILE'], 'Desktop')
+desktop_path = os.path.join(os.path.expanduser('~'), 'Desktop')
 RUTA_SALIDA = os.path.join(desktop_path, 'Reporte_Cartera')
 
 # Crear la carpeta si no existe
