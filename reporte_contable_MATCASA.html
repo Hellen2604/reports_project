@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Reporte Contable - MATCASA</title>
+    <style>
+        body {
+            font-family: 'Arial', monospace; font-size: 12px; line-height: 1.2;
+            color: #000; background-color: #f5f5f5; padding: 20px;
+        }
+        .document {
+            background-color: white; max-width: 800px; margin: 0 auto;
+            padding: 30px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            min-height: 10.9in;
+            display: flex; flex-direction: column;
+        }
+        .page-content { flex-grow: 1; }
+        .header { display: flex; justify-content: space-between; margin-bottom: 30px; }
+        .header h1 { margin: 0; font-size: 17px; font-weight: normal; }
+        .company-info p { margin: 3px 0; font-size: 14px; }
+        .date-info { text-align: right; font-size: 15px; }
+        .date-info p { margin: 2px 0; }
+        .document-details { margin: 20px 0; font-size: 11px; }
+        .document-details p { margin: 3px 0; }
+        .accounting-table {
+            width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 11px;
+        }
+        .accounting-table thead, .accounting-table tfoot { display: table-row-group; }
+        .accounting-table thead tr {
+            border-top: 1px solid #000; border-bottom: 1px solid #000; background-color: #f0f0f0;
+        }
+        .accounting-table th { padding: 1px; font-weight: bold; text-align: center; }
+        .accounting-table td { padding: 5px; text-align: left; }
+        .number-cell { text-align: right; }
+        /* --- ESTILO CORREGIDO Y RESTAURADO --- */
+        .totals-row td:nth-child(n+2) {
+            border-top: 1px solid #000;
+            border-bottom: 1px solid #000;
+            font-weight: bold;
+        }
+        .signatures-footer {
+            display: flex; justify-content: space-between; width: 100%;
+            padding-top: 50px; page-break-inside: avoid;
+        }
+        .signature-box { text-align: center; width: 200px; }
+        .signature-line { border-top: 1px solid #000; margin: 5px 0; height: 5px; width: 100%; }
+        .signature-label { display: block; font-size: 14px; font-weight: normal; }
+        .controls { text-align: center; margin-bottom: 20px; }
+        .btn { background-color: #007bff; color: white; border: none; padding: 10px 20px; font-size: 14px; cursor: pointer; }
+        @media print {
+            body { background-color: white; padding: 0; margin: 0; }
+            .controls, .document > br { display: none; }
+            .document {
+                box-shadow: none; padding: 0; margin: 0; max-width: 100%;
+                min-height: 95vh; page-break-after: always;
+            }
+            .document:last-child { page-break-after: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <div class="controls"><button class="btn" onclick="window.print()">Imprimir</button></div>
+    
+<div class="document" id="document-CI00115209">
+    <div class="page-content">
+        <div class="header">
+            <div class="company-info">
+                <h1>MATCASA</h1>
+                <p>Dir: KM 15.5 CARRETERA NUEVA LEON</p>
+                <p><span style="margin-left: 3em;">800 MTS AL NORTE</span></p>
+                <p><span style="margin-left: 3em;">226996487 /22699490</span></p>
+            </div>
+            <div class="date-info">
+                <p>Fecha: <span class="current-date"></span></p>
+                <p>Hora: <span class="current-time"></span></p>
+                <p>Página: 1</p>
+            </div>
+        </div>
+        <div class="document-details">
+            <p><span style="margin-left: 3em;">Asiento: CI00115209</span></p>
+            <p><span style="margin-left: 3em;">Fecha: 31/08/2025</span></p>
+            <p><span style="margin-left: 1em;">Fecha Creación: 12/09/2025</span></p>
+            <p>Última Modificación: <span class="last-modification"></span></p>
+            <p>Notas: MovMes-de Ms000013-Proteina Texturizada Clara-por -559.35-Segun Asiento : Ci00114883-Segun No.Registro : 2885247-Consumo Aditivo-Sub Registro Cantidades CI00114883
+</p>
+        </div>
+        <div class="table-container">
+            <table class="accounting-table">
+                <thead>
+                    <tr>
+                        <th>Centro Costo</th><th>Cuenta Contable</th><th>Descripción</th>
+                        <th>Débito C$</th><th>Crédito C$</th><th>Débito $</th><th>Crédito $</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>002-999-000-000-000</td><td>1-01-04-03-001-000</td><td>Condimentos</td>
+                        <td class="number-cell">17.352,54</td>
+                        <td class="number-cell"></td>
+                        <td class="number-cell">473,80</td>
+                        <td class="number-cell"></td>
+                    </tr>
+
+                    <tr>
+                        <td>002-004-005-000-000</td><td>6-04-01-03-018-000</td><td>Condimentos</td>
+                        <td class="number-cell"></td>
+                        <td class="number-cell">17.352,54</td>
+                        <td class="number-cell"></td>
+                        <td class="number-cell">473,80</td>
+                    </tr>
+
+                </tbody>
+                <tfoot>
+                    <tr class="totals-row">
+                        <td colspan="3" style="text-align: right; padding-right: 5px;"><span style="font-weight: bold;">Totales:</span></td>
+                        <td class="number-cell"><strong>17.352,54</strong></td>
+                        <td class="number-cell"><strong>17.352,54</strong></td>
+                        <td class="number-cell"><strong>473,80</strong></td>
+                        <td class="number-cell"><strong>473,80</strong></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    <div class="signatures-footer">
+        <div class="signature-box">
+            <span class="signature-label">OQUINO</span><div class="signature-line"></div><span class="signature-label">ELABORADO POR</span>
+        </div>
+        <div class="signature-box">
+            <span class="signature-label">&nbsp;</span><div class="signature-line"></div><span class="signature-label">REVISADO POR</span>
+        </div>
+        <div class="signature-box">
+            <span class="signature-label">&nbsp;</span><div class="signature-line"></div><span class="signature-label">AUTORIZADO POR</span>
+        </div>
+    </div>
+</div>
+
+<div class="document" id="document-CI00115210">
+    <div class="page-content">
+        <div class="header">
+            <div class="company-info">
+                <h1>MATCASA</h1>
+                <p>Dir: KM 15.5 CARRETERA NUEVA LEON</p>
+                <p><span style="margin-left: 3em;">800 MTS AL NORTE</span></p>
+                <p><span style="margin-left: 3em;">226996487 /22699490</span></p>
+            </div>
+            <div class="date-info">
+                <p>Fecha: <span class="current-date"></span></p>
+                <p>Hora: <span class="current-time"></span></p>
+                <p>Página: 1</p>
+            </div>
+        </div>
+        <div class="document-details">
+            <p><span style="margin-left: 3em;">Asiento: CI00115210</span></p>
+            <p><span style="margin-left: 3em;">Fecha: 01/09/2025</span></p>
+            <p><span style="margin-left: 1em;">Fecha Creación: 12/09/2025</span></p>
+            <p>Última Modificación: <span class="last-modification"></span></p>
+            <p>Notas: MovMes-de Ms000013-Proteina Texturizada Clara-por -61.71-Segun Asiento : Ci00115178-Segun No.Registro : 2889128-Consumo Aditivo-Sub Registro Cantidades CI00114883</p>
+        </div>
+        <div class="table-container">
+            <table class="accounting-table">
+                <thead>
+                    <tr>
+                        <th>Centro Costo</th><th>Cuenta Contable</th><th>Descripción</th>
+                        <th>Débito C$</th><th>Crédito C$</th><th>Débito $</th><th>Crédito $</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>002-999-000-000-000</td><td>1-01-04-03-001-000</td><td>Condimentos</td>
+                        <td class="number-cell">1.914,41</td>
+                        <td class="number-cell"></td>
+                        <td class="number-cell">52,27</td>
+                        <td class="number-cell"></td>
+                    </tr>
+
+                    <tr>
+                        <td>002-004-005-000-000</td><td>6-04-01-03-018-000</td><td>Condimentos</td>
+                        <td class="number-cell"></td>
+                        <td class="number-cell">1.914,41</td>
+                        <td class="number-cell"></td>
+                        <td class="number-cell">52,27</td>
+                    </tr>
+
+                </tbody>
+                <tfoot>
+                    <tr class="totals-row">
+                        <td colspan="3" style="text-align: right; padding-right: 5px;"><span style="font-weight: bold;">Totales:</span></td>
+                        <td class="number-cell"><strong>1.914,41</strong></td>
+                        <td class="number-cell"><strong>1.914,41</strong></td>
+                        <td class="number-cell"><strong>52,27</strong></td>
+                        <td class="number-cell"><strong>52,27</strong></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    <div class="signatures-footer">
+        <div class="signature-box">
+            <span class="signature-label">OQUINO</span><div class="signature-line"></div><span class="signature-label">ELABORADO POR</span>
+        </div>
+        <div class="signature-box">
+            <span class="signature-label">&nbsp;</span><div class="signature-line"></div><span class="signature-label">REVISADO POR</span>
+        </div>
+        <div class="signature-box">
+            <span class="signature-label">&nbsp;</span><div class="signature-line"></div><span class="signature-label">AUTORIZADO POR</span>
+        </div>
+    </div>
+</div>
+
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+            const day = String(now.getDate()).padStart(2, '0');
+            const month = String(now.getMonth() + 1).padStart(2, '0');
+            const year = now.getFullYear();
+            const currentDate = `${day}/${month}/${year}`;
+            let hours = now.getHours();
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const ampm = hours >= 12 ? 'PM' : 'AM';
+            hours = hours % 12 || 12;
+            const currentTime = `${hours}:${minutes} ${ampm}`;
+            document.querySelectorAll('.current-date').forEach(el => el.textContent = currentDate);
+            document.querySelectorAll('.current-time').forEach(el => el.textContent = currentTime);
+            document.querySelectorAll('.last-modification').forEach(el => el.textContent = currentDate);
+        }
+        window.onload = updateDateTime;
+    </script>
+</body>
+</html>
