@@ -1,0 +1,4 @@
+tomllib
+pyodbc
+xlwt
+pdfkit
