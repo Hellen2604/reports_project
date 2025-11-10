@@ -1,4 +1,3 @@
-tomllib
 pyodbc
 xlwt
 pdfkit
